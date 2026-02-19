@@ -30,6 +30,7 @@ body{
     padding: clamp(12px,2vw,32px);
     background-color: white;
     flex-shrink: 0;
+    position: relative;
 }
 
 .header img{
@@ -102,6 +103,9 @@ body{
 h1{
     font-weight: 900;
     font-size: clamp(24px,3vw,40px);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 h3{
