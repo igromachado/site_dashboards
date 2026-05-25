@@ -12,7 +12,7 @@
     <div class="header">
         <img src="CSS/Imagens/Bosch_symbol_logo_black_red.svg" alt="">
         <h1 style="position: center;"> PPx Links </h1>
-        <h5>Last Updated on: 19/02/2026</h5>
+        <h5>Last Updated on: <span id='data'></span></h5>
     </div>
 
     <div class="main">
@@ -73,13 +73,54 @@
                 <h2>PPx BI</h2>
             </a>
 
-            <a href="https://app.powerbi.com/groups/me/reports/70f1ca4b-0eb0-4420-aba5-9a89ba5e7f9e/ReportSection?experience=power-bi"
-            class="square" target="_blank" rel="noopener">
-                <img src="css/Imagens/ideation-lightbulb-gear.svg" alt="" class="icon">
-                <h2>Part Family BI</h2>
+            <a href="https://app.powerbi.com/groups/me/reports/b7fa760a-c3d6-4a7b-9703-3e4f12cce460/bd1a086370c3b2375bbd?ctid=0ae51e19-07c8-4e4b-bb6d-648ee58410f4&experience=power-bi"
+            class="square" target="_blank" rel="noopener" title="">
+                <img src="CSS/Imagens/desktop-share-start-arrow.svg" alt="" class="icon">
+                <h2>NEG TopSupplier</h2>
             </a>
+
+        </div>
+        <div class="line">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=GR7lCsgHS067bWSO5YQQ9Bwe-SSnFjdDmtPd6Bpi2lRUN1M3N1UzRllLUEJMN0s4TTJGRUozVUpPVSQlQCN0PWcu"
+            class="square" target="_blank" rel="noopener">
+                <img src="CSS/Imagens/clipboard-list.svg" alt="" class="icon" title="">
+                <h2>RC e PO</h2>
+            </a>
+
+            <div class="square-empty">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                     fill="none" stroke="#b0b5ba" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14M5 12h14"/>
+                </svg>
+            </div>
+
+            <div class="square-empty">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                     fill="none" stroke="#b0b5ba" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14M5 12h14"/>
+                </svg>
+            </div>
+            
+            <div class="square-empty">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                     fill="none" stroke="#b0b5ba" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14M5 12h14"/>
+                </svg>
+            </div>
+            
+            <div class="square-empty">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+                     fill="none" stroke="#b0b5ba" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14M5 12h14"/>
+                </svg>
+            </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('data').textContent = 
+            new Date(document.lastModified).toLocaleDateString('pt-BR');
+    </script>
 
 </body>
 </html>

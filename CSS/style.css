@@ -1,66 +1,93 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html, body {
     height: 100%;
+    overflow: hidden;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
-    font-family: 'BoschSans';
+    font-family: 'BoschSans', sans-serif;
 }
 
-.supergraphic{
+.supergraphic {
     width: 100%;
     height: 12px;
+    flex-shrink: 0;
     background-image: url(Imagens/Bosch-Supergraphic_RGB.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.header{
+.header {
+    flex-shrink: 0;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: clamp(12px,2vw,32px);
+    padding: clamp(12px, 2vw, 32px) clamp(16px, 3vw, 40px);
     background-color: white;
-    flex-shrink: 0;
-    position: relative;
 }
 
-.header img{
-    height: clamp(48px,6vw,75px);
+.header img {
+    height: clamp(40px, 5vw, 70px);
     width: auto;
 }
 
-.main{
-    flex: 1;
+.header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 900;
+    font-size: clamp(22px, 2.5vw, 38px);
+    text-align: center;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.header h5 {
+    text-align: right;
+    font-weight: 400;
+    font-size: clamp(11px, 1vw, 14px);
+    color: #666;
+    white-space: nowrap;
+}
+
+.main {
+    flex: 1 1 0;
+    min-height: 0;
     background-color: #EFF1F2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: clamp(20px, 3vh, 36px);
+    align-items: center;
+    justify-content: flex-start;
+    gap: clamp(16px, 2.5vh, 32px);
+    overflow-y: auto;
+    padding: clamp(16px, 2.5vh, 36px) clamp(16px, 2vw, 40px);
 }
 
-.line{
+.line {
     display: flex;
     justify-content: center;
-    gap: clamp(20px, 2vw, 44px);
+    gap: clamp(16px, 2vw, 40px);
     flex-wrap: wrap;
+    flex-shrink: 0;
+    width: 100%;
 }
 
-.square{
-    width: min(18vw,260px);
-    height: min(18vw,260px);
+.square {
+    width: min(18vw, 260px);
+    height: min(18vw, 260px);
     min-width: 160px;
     min-height: 160px;
     background-color: white;
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
 
     display: flex;
     flex-direction: column;
@@ -70,46 +97,62 @@ body{
 
     text-decoration: none;
     color: inherit;
-
     cursor: pointer;
-    transition: 
+
+    transition:
         transform 0.25s ease,
-        box-shadow 0.25s ease
+        box-shadow 0.25s ease;
 }
 
-.square:hover{
+.square:hover {
     transform: translateY(-6px);
-    box-shadow: 0px 15px 20px rgba(0,0,0,0.25);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.25);
 }
 
-.square:active{
+.square:active {
     transform: translateY(-2px) scale(0.98);
-    box-shadow: 0px 8px 12px rgba(0,0,0,0.25);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
 }
 
-.square .icon{
+.square .icon {
     width: 70%;
     max-width: 140px;
     height: auto;
 }
 
-.square h2{
+.square h2 {
     font-weight: 700;
-    font-size: clamp(16px,1.8vw,28px);
+    font-size: clamp(16px, 1.8vw, 28px);
     margin: 0;
     text-align: center;
 }
 
-h1{
-    font-weight: 900;
-    font-size: clamp(24px,3vw,40px);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.square-empty {
+    width: min(18vw, 260px);
+    height: min(18vw, 260px);
+    min-width: 160px;
+    min-height: 160px;
+
+    background-color: transparent;
+    border: 2px dashed #b0b5ba;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    cursor: default;
+    opacity: 0.5;
+
+    transition:
+        opacity 0.2s ease,
+        border-color 0.2s ease;
 }
 
-h3{
-    font-weight: 200;
+.square-empty:hover {
+    opacity: 0.65;
+    border-color: #888;
 }
 
 @font-face {
